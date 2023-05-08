@@ -26,3 +26,15 @@ export default new VueRouter({
     },
   ],
 });
+
+/*
+
+In Vue.js, "history" and "hash" are two different routing modes used to handle the URLs of the application.
+
+"history" mode uses the HTML5 History API to manipulate the browser's URL without triggering a page refresh. This allows for a cleaner, more traditional-looking URL structure, without the "#" character commonly used in "hash" mode. In "history" mode, the server needs to be configured to always serve the main Vue app's HTML file, regardless of the requested URL, in order to allow Vue to handle routing.
+
+"hash" mode, on the other hand, uses the URL fragment identifier (the part after the "#" symbol) to simulate different URLs for different content, without actually requesting new pages from the server. This mode is generally more compatible with older browsers and server configurations, since it doesn't rely on the HTML5 History API, but it also has some limitations. For example, the fragment identifier is not included in HTTP requests, so server-side routing based on the URL is not possible in "hash" mode.
+
+In summary, "history" mode provides a cleaner URL structure and server-side routing capabilities, while "hash" mode provides compatibility with older browsers and server configurations. The choice between the two modes depends on the specific requirements of the application and the target audience.
+
+*/
